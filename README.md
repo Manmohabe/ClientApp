@@ -12,7 +12,9 @@ Angular 17.1.2 requires atleast node version ^18.13.0 . Check this [version comp
 This was a demonstration of Angular Key concepts implementation Such as Lazy loading, Basic Authentication, new Control flow,
 Standalone Components, Angular Forms etc and therefore should not be used in production. 
 
-The project uses Angular Material Components, xng-breadcrumb and @ngbracket/ngx-layout
+The project uses [Material Components](https://material.angular.io/components/categories), [xng-breadcrumb](https://github.com/udayvunnam/xng-breadcrumb) and [ngx-layout](https://github.com/ngbracket/ngx-layout)
+
+Default username and password is `admin`
 
 
 ## Code scaffolding

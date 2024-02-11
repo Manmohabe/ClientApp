@@ -17,8 +17,8 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   year= new Date().getFullYear();
   form= new FormGroup({
-    userName:new FormControl('martin',[Validators.required]),
-    password:new FormControl('pesalink',[Validators.required])
+    userName:new FormControl('admin',[Validators.required]),
+    password:new FormControl('admin',[Validators.required])
   });
 
   constructor(private authservice:AuthService,

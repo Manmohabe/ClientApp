@@ -9,7 +9,7 @@ export class AuthService {
   constructor(private route:Router) { }
 
   login(username: string, password: string):boolean {
-    if (username === 'martin' && password === 'pesalink') {
+    if (username === 'admin' && password === 'admin') {
       localStorage.setItem('username', username);
       return true;
     }
