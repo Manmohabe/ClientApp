@@ -1,11 +1,17 @@
 
-<div class="flex-container">
+<div class="flex-container" style="margin:10px;">
  <div>
     <xng-breadcrumb></xng-breadcrumb>
  </div>
  <div>
-    <button mat-icon-button aria-label="Create New">
-        <mat-icon>add</mat-icon>
-      </button>
+    @if (ShowNew) 
+    {
+        <button routerLink={{NewRouterLinkUrl}} mat-button aria-label="Create New">
+            <mat-icon>add</mat-icon>
+            New
+          </button>
+    }
+  
  </div>
 </div>
+

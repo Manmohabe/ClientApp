@@ -30,6 +30,8 @@ export class UserService {
           return user.company?.toLowerCase().includes(value);
         case 'county':
           return user.address.county.toLowerCase().includes(value);
+        case 'email&name':
+          return user.email.toLowerCase().includes(value)|| user.name.toLowerCase().includes(value);
       }
       return true; // Return true if no filter column is specified
     });
