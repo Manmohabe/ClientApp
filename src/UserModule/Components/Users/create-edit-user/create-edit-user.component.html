@@ -1,29 +1,117 @@
 <app-page-tob-bar></app-page-tob-bar>
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="form" (submit)="onSubmit()">
+            <fieldset>
+                <legend>General Information</legend>
+                <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="3%" fxLayoutAlign="center">
+                    <div fxFlex>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input matInput formControlName="name" placeholder="Name">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput formControlName="email" placeholder="Email">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Phone</mat-label>
+                            <input matInput formControlName="phone" placeholder="Phone">
+                        </mat-form-field>
+                    </div>
 
-<div fxLayout="row" fxLayout.xs="column">
-    <div fxFlex="25">
-        first-section
-    </div>
-    <div fxFlex="25">
-        second-section
-    </div>
-    <div fxFlex="25">
-        third-section
-    </div>
-    <div fxFlex="25">
-        fort-section
-    </div>
-    
-    <div fxFlex="25">
-        2first-section
-    </div>
-    <div fxFlex="25">
-        2second-section
-    </div>
-    <div fxFlex="25">
-        2third-section
-    </div>
-    <div fxFlex="25">
-        2fort-section
-    </div>
-</div>
+
+                </div>
+                <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="3%" fxLayoutAlign="center">
+
+                    <div fxFlex>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Company</mat-label>
+                            <input matInput formControlName="company" placeholder="Company">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Next of Kin</mat-label>
+                            <input matInput formControlName="nextofkin" placeholder="Next of Kin">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Gender</mat-label>
+                            <mat-select formControlName="gender">
+                                <mat-option value="Male">Male</mat-option>
+                                <mat-option value="Female">Female</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </fieldset>
+            <div formGroupName="address">
+                <fieldset>
+                    <legend>Address</legend>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="3%"
+                        fxLayoutAlign="center">
+                        <div fxFlex>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Postal Code</mat-label>
+                                <input matInput formControlName="postalCode" placeholder="Postal Code">
+                            </mat-form-field>
+                        </div>
+
+                        <div fxFlex>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Building</mat-label>
+                                <input matInput formControlName="building" placeholder="Building">
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Street</mat-label>
+                                <input matInput formControlName="street" placeholder="Street">
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="3%"
+                        fxLayoutAlign="center">
+                        <div fxFlex>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>Town</mat-label>
+                                <input matInput formControlName="town" placeholder="Town">
+                            </mat-form-field>
+                        </div>
+
+                        <div fxFlex>
+                            <mat-form-field class="full-width" appearance="outline">
+                                <mat-label>County</mat-label>
+                                <input matInput formControlName="county" placeholder="County">
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex>
+                        </div>
+
+                    </div>
+                </fieldset>
+            </div>
+            <div class="flex-container" style="margin:10px;">
+                <div>
+                    <button mat-button aria-label="Cancel" routerLink="{{returnrul}}">
+                        <mat-icon>cancel</mat-icon>
+                        cancel
+                    </button>
+                </div>
+                <div>
+
+                    <button [disabled]="form.invalid" type="submit" mat-flat-button color="primary" aria-label="Submit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

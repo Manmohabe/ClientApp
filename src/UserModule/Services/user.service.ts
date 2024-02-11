@@ -72,7 +72,8 @@ export class UserService {
 
   createUser(user: User): Observable<ApiResponse<User>> {
     const lastId = this.users.length > 0 ? this.users[this.users.length - 1].id : 0;
-    const newUser: User = { ...user, id: lastId + 1 };
+    const id = lastId + 1;
+    const newUser: User = { ...user, id: id,avatar: `https://i.pravatar.cc/150?img=${id}`};
     this.users.push(newUser);
     const response: ApiResponse<User> = {
       data: user,
@@ -114,6 +115,8 @@ export class UserService {
         phone: `07113810${i}`.padEnd(10, '0'), // Ensure phone number is 10 characters long
         avatar: `https://i.pravatar.cc/150?img=${i}`,
         company: i % 2 === 0 ? undefined : `Company ${i}`,// Randomly set company to undefined
+        gender:i % 3 === 0 ? 'Female' : `Male`,//Random,
+        nextofkin: '',
         address: {
           street: `Street ${i}`,
           building: `Building ${i}`,

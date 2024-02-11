@@ -7,6 +7,8 @@ export interface User {
     phone: string;
     address: Address;
     avatar: string;
+    gender: string;
+    nextofkin: string|undefined;
     company: string|undefined;
 
 }
