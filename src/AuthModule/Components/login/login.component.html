@@ -1,1 +1,20 @@
-<p>login works!</p>
+<mat-card class="my-card">
+    <mat-card-content >
+       <div class="content" style="margin-bottom: 40PX;">
+        <p>ACCOUNT LOGIN</p> 
+       </div>
+       <form [formGroup]='form' autocomplete="off" >
+          <mat-form-field class="full-width" appearance="outline" >
+             <mat-label>UserName</mat-label>
+             <input matInput placeholder="UserName" formControlName="userName" required>
+          </mat-form-field>
+          <mat-form-field class="full-width" appearance="outline">
+             <mat-label>Password</mat-label>
+             <input matInput type="password" placeholder="Password" formControlName="password" required>
+          </mat-form-field>
+       </form>
+       <div class="content">
+             <button mat-raised-button (click)="login()"  color="primary" [disabled]="form.invalid">LOGIN</button>
+          </div>
+    </mat-card-content>
+ </mat-card>
