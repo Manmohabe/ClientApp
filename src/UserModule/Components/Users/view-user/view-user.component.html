@@ -1,24 +1,80 @@
 <app-page-tob-bar></app-page-tob-bar>
+<mat-card>
+    <mat-card-content>
+        <fieldset>
+            <legend>General Information</legend>
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+                <div fxFlex class="label-format">
+                    <mat-label>Name : {{user?.name}}</mat-label>
+                </div >
+                <div fxFlex class="label-format">
+                    <mat-label>Email : {{user?.email}}</mat-label>
+                </div>
+                <div fxFlex class="label-format">
+                    <mat-label>Phone : {{user?.phone}}</mat-label>
+                </div>
 
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
 
+                <div fxFlex class="label-format">
+                    <mat-label>Company : {{user?.company}}</mat-label>
+                </div>
+                <div fxFlex class="label-format">
+                    <mat-label>Next of Kin : {{user?.nextofkin}}</mat-label>
+                </div>
+                <div fxFlex class="label-format">
+                    <mat-label>Gender : {{user?.gender}}</mat-label>
+                </div>
+            </div>
+        </fieldset>
 
+        <fieldset>
+            <legend>Address</legend>
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+                <div fxFlex class="label-format">
+                    <mat-label>Postal Code : {{user?.address?.postalCode}}</mat-label>
+                </div>
 
+                <div fxFlex class="label-format">
+                    <mat-label>Building : {{user?.address?.building}}</mat-label>
+                </div>
+                <div fxFlex class="label-format">
+                    <mat-label>Street : {{user?.address?.street}}</mat-label>
+                </div>
 
-<div class="flex-container" style="margin:10px;">
-    <div>
-        <button  mat-button aria-label="Edit" routerLink="/usermodule/users" >
-            <mat-icon>cancel</mat-icon>
-            cancel
-          </button>
-    </div>
-    <div>
-       @if (user) 
-       {
-           <button mat-button aria-label="Edit" [routerLink]="['/usermodule/users/edit',user.id]" >
-               <mat-icon>edit</mat-icon>
-               Edit
-             </button>
-       }
-     
-    </div>
-   </div>
+            </div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+                <div fxFlex class="label-format">
+                    <mat-label>Town : {{user?.address?.town}}</mat-label>
+                </div>
+
+                <div fxFlex class="label-format">
+                    <mat-label>County : {{user?.address?.county}}</mat-label>
+                </div>
+                <div fxFlex>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <div class="flex-container" style="margin:10px;">
+            <div>
+                <button mat-button aria-label="Edit" routerLink="/usermodule/users">
+                    <mat-icon>cancel</mat-icon>
+                    cancel
+                </button>
+            </div>
+            <div>
+                @if (user)
+                {
+                <button mat-button aria-label="Edit" [routerLink]="['/usermodule/users/edit',user.id]">
+                    <mat-icon>edit</mat-icon>
+                    Edit
+                </button>
+                }
+
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

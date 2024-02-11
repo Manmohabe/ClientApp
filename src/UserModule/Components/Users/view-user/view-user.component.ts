@@ -5,11 +5,15 @@ import { User } from '../../../Models/User';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import {  MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
 @Component({
   selector: 'app-view-user',
   standalone: true,
-  imports: [PageTobBarComponent,MatButtonModule,MatIconModule,RouterLink],
+  imports: [PageTobBarComponent,MatButtonModule,MatIconModule,RouterLink,
+    MatFormFieldModule,FlexLayoutModule,MatCardModule],
   templateUrl: './view-user.component.html',
   styleUrl: './view-user.component.css'
 })

@@ -46,7 +46,7 @@ export class UsersListComponent {
     this.searchText$.next(searchvalue);
   }
 
-  displayedColumns: string[] = ['avatar', 'name', 'company', 'email', 'phone', 'action'];
+  displayedColumns: string[] = ['avatar', 'name', 'company', 'email', 'phone','gender', 'action'];
 
   constructor(private userService: UserService, private router: Router) {
   }
