@@ -58,7 +58,7 @@ export class UserService {
   }
 
   getUser(id: number): Observable<ApiResponse<User>> {
-    const user = this.users.find(user => user.id === id);
+    const user = this.users.find(user => user.id == id);
 
     const response: ApiResponse<User> = {
       data: user,
@@ -85,7 +85,7 @@ export class UserService {
   }
 
   updateUser(user: User): Observable<ApiResponse<User>> {
-    let index = this.users.findIndex(u => u.id === user.id);
+    let index = this.users.findIndex(u => u.id == user.id);
     this.users[index] = user;
     const response: ApiResponse<User> = {
       data: user,
@@ -98,7 +98,7 @@ export class UserService {
   }
 
   deleteUser(id: number): Observable<void> {
-    let index = this.users.findIndex(user => user.id === id);
+    let index = this.users.findIndex(user => user.id == id);
     this.users.splice(index, 1);
     return of();
   }

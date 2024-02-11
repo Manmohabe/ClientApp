@@ -1,1 +1,24 @@
 <app-page-tob-bar></app-page-tob-bar>
+
+
+
+
+
+<div class="flex-container" style="margin:10px;">
+    <div>
+        <button  mat-button aria-label="Edit" routerLink="/usermodule/users" >
+            <mat-icon>cancel</mat-icon>
+            cancel
+          </button>
+    </div>
+    <div>
+       @if (user) 
+       {
+           <button mat-button aria-label="Edit" [routerLink]="['/usermodule/users/edit',user.id]" >
+               <mat-icon>edit</mat-icon>
+               Edit
+             </button>
+       }
+     
+    </div>
+   </div>

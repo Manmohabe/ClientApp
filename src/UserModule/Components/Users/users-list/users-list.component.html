@@ -52,10 +52,11 @@
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+                [ngClass]="{'company-row-color': (row.company == null || row.company == undefined) }"
                 [routerLink]="['/usermodule/users/view',row.id]">
             </tr>
 
-            <!-- Row shown when there is no matching data. -->
+            <!-- Row shown when there is no data.[ngClass]="{'new-row': row.id == 0 }" -->
             <tr class="mat-row" *matNoDataRow>
                 <td class="mat-cell" colspan="4">No data</td>
             </tr>

@@ -13,13 +13,14 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-users-list',
   standalone: true,
   imports: [MatTableModule, MatPaginator, PageTobBarComponent,
     MatIconModule, MatButtonModule, MatMenuModule, RouterLink,
-    MatFormFieldModule, MatInputModule],
+    MatFormFieldModule, MatInputModule,CommonModule],
   templateUrl: './users-list.component.html',
   styleUrl: './users-list.component.css'
 })

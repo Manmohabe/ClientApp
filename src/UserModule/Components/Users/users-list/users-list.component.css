@@ -8,3 +8,7 @@
     max-height: 320px;
     overflow: auto;
   }
+
+  .company-row-color{
+    background-color: red;
+  }

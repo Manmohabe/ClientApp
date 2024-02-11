@@ -1,8 +1,7 @@
 import { Routes } from "@angular/router";
 import { UsersListComponent } from "./users-list/users-list.component";
-import { CreateUserComponent } from "./create-user/create-user.component";
-import { EditUserComponent } from "./edit-user/edit-user.component";
 import { ViewUserComponent } from "./view-user/view-user.component";
+import { CreateEditUserComponent } from "./create-edit-user/create-edit-user.component";
 
 export const UsersRoutes: Routes = [
     { path: '', title: "Users List", component: UsersListComponent },
@@ -14,7 +13,7 @@ export const UsersRoutes: Routes = [
                 label: 'New',
             }
         },
-        component: CreateUserComponent
+        component: CreateEditUserComponent
     },
     {
         path: 'edit/:id',
@@ -23,7 +22,7 @@ export const UsersRoutes: Routes = [
             breadcrumb: {
                 label: 'Edit',
             }
-        }, component: EditUserComponent
+        }, component: CreateEditUserComponent
     },
     {
         path: 'view/:id',
