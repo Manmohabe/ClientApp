@@ -5,6 +5,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Angular 17.1.2 requires atleast node version ^18.13.0 . Check this for version compartibility `https://angular.io/guide/versions`
+
+## Assumptions
+
+This was a demonstration of Angular Key concepts implementation Such as Lazy loading, Basic Authentication, new Control flow,
+Standalone Components, Angular Forms etc and therefore should not be used in production. 
+
+The project uses Angular Material Components, xng-breadcrumb and @ngbracket/ngx-layout
+
 
 ## Code scaffolding
 
