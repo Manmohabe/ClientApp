@@ -5,7 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Install the dependancies by running `npm install`
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
 Angular 17.1.2 requires atleast node version ^18.13.0 . Check this [version compartibility](https://angular.io/guide/versions)
 
 ## Assumptions
