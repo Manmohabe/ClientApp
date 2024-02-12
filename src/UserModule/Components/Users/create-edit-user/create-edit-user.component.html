@@ -9,18 +9,31 @@
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Name</mat-label>
                             <input matInput formControlName="name" placeholder="Name">
+                            @if (form.get('name')?.hasError('required')) {
+                            <mat-error>Name is required</mat-error>
+                            }
                         </mat-form-field>
                     </div>
                     <div fxFlex>
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Email</mat-label>
                             <input type="email" matInput formControlName="email" placeholder="Email">
+                            @if (form.get('email')?.hasError('email') && !form.get('email')?.hasError('required')) {
+                            <mat-error>Email is invalid</mat-error>
+                            }
+                            @if (!form.get('email')?.hasError('email') && form.get('email')?.hasError('required')) {
+                            <mat-error>Email is required</mat-error>
+                            }
                         </mat-form-field>
                     </div>
                     <div fxFlex>
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Phone</mat-label>
                             <input matInput formControlName="phone" placeholder="Phone">
+                            <mat-hint>Only numeric values allowed</mat-hint>
+                            @if (form.get('phone')?.hasError('required')) {
+                            <mat-error>Phone is required</mat-error>
+                            }
                         </mat-form-field>
                     </div>
 
@@ -47,6 +60,9 @@
                                 <mat-option value="Male">Male</mat-option>
                                 <mat-option value="Female">Female</mat-option>
                             </mat-select>
+                            @if (form.get('gender')?.hasError('required')) {
+                            <mat-error>Gender is required</mat-error>
+                            }
                         </mat-form-field>
                     </div>
                 </div>
